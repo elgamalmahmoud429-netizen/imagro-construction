@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(10, 14, 39);
+  color: rgb(255, 255, 255);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(10, 14, 39);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(217, 119, 6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(245, 158, 11);
+}
+
+/* Text Selection */
+::selection {
+  background-color: rgb(217, 119, 6);
+  color: white;
+}
+
+/* Focus Styles */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgb(217, 119, 6);
+  outline-offset: 2px;
+}
+
+/* Form Styles */
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility Classes */
+.container-max {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.gradient-accent {
+  @apply bg-gradient-to-r from-brand-accent to-brand-accent-light;
+}
+
+.transition-all {
+  @apply transition-all duration-300 ease-in-out;
+}
