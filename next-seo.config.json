@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/next-seo.schema.json",
+  "openGraph": {
+    "type": "website",
+    "locale": "en_US",
+    "url": "https://imagro-construction.com",
+    "siteName": "IMAGRO Construction"
+  },
+  "twitter": {
+    "handle": "@imagroconstruction",
+    "site": "@imagroconstruction",
+    "cardType": "summary_large_image"
+  }
+}
