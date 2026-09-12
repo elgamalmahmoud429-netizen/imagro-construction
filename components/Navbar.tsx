@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { FiMenu, FiX } from 'react-icons/fi'
 
@@ -15,6 +16,7 @@ export function Navbar() {
     { href: '/services', label: 'SERVICES' },
     { href: '/projects', label: 'PROJECTS' },
     { href: '/experience', label: 'EXPERIENCE' },
+    { href: '/clock', label: 'CLOCK' },
     { href: '/contact', label: 'CONTACT' },
   ]
 
@@ -26,11 +28,16 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-brand-accent to-brand-accent-light rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">IM</span>
-              </div>
-              <span className="text-white font-bold text-xl hidden sm:block">IMAGRO</span>
+            <div className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+              <Image
+                src="/logo-imagro_color_space.svg"
+                alt="IMAGRO Construction"
+                width={50}
+                height={50}
+                priority
+                className="h-12 w-auto"
+              />
+              <span className="text-white font-bold text-lg hidden sm:block">IMAGRO</span>
             </div>
           </Link>
 
